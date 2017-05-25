@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                //launch notification here
+                //launch notification here through alarm
                 Calendar cal = Calendar.getInstance();
                 cal.add(Calendar.SECOND, 5);
 
@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
                 AlarmManager am = (AlarmManager)
                         getSystemService(Activity.ALARM_SERVICE);
-                
+
                 am.set(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(),
                         pendingIntent);
 
